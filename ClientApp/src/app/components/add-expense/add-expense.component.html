@@ -1,0 +1,21 @@
+<form class="mt-5">
+    <div class="d-md-flex justify-content-between">
+        <div class="input-group">
+            <label for="date"><span class="input-group-text">Date: </span></label>
+            <input type="date" class="form-control" name="date" id="date" ng-required>
+        </div>
+        <div class="input-group">
+            <label for="location"><span class="input-group-text">Location: </span></label>
+            <input type="text" class="form-control" name="location" id="location" placeholder="Enter Location" ng-required>
+        </div>
+        <div class="input-group">
+            <label for="description"><span class="input-group-text">Description: </span></label>
+            <input type="text" class="form-control" name="description" id="description" placeholder="Enter Description" ng-required>
+        </div>
+        <div class="input-group">
+            <label for="amount"><span class="input-group-text">$</span></label>
+            <input type="number" class="form-control" name="amount" id="amount" step=".01" placeholder="Enter Amount" ng-required="true">
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="click()">Add Expense</button>
+</form>
