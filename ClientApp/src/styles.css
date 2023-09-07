@@ -1,6 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Mate:ital@0;1&display=swap');
 
-/* Provide sufficient contrast against white background */
+body {
+  font-family: 'Mate', serif;
+}
+
 a {
   color: #0366d6;
 }
@@ -13,4 +16,8 @@ code {
   color: #fff;
   background-color: #1b6ec2;
   border-color: #1861ac;
+}
+
+.red-border {
+  border: 1px solid red;
 }
