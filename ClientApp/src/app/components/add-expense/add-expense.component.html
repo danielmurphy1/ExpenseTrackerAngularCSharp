@@ -1,21 +1,23 @@
 <form class="mt-5">
-    <div class="d-md-flex justify-content-between">
-        <div class="input-group">
+    <div class="d-md-flex mb-md-3 justify-content-between">
+        <div class="input-group mb-2 mb-md-0">
             <label for="date"><span class="input-group-text">Date: </span></label>
-            <input type="date" class="form-control" name="date" id="date" ng-required>
+            <input type="date" class="form-control" name="date" id="date" [(ngModel)]="date" ng-required>
         </div>
-        <div class="input-group">
+        <div class="input-group mb-2 mb-md-0">
             <label for="location"><span class="input-group-text">Location: </span></label>
-            <input type="text" class="form-control" name="location" id="location" placeholder="Enter Location" ng-required>
+            <input type="text" class="form-control" name="location" id="location" [(ngModel)]="location" placeholder="Enter Location" ng-required>
         </div>
-        <div class="input-group">
+        <div class="input-group mb-2 mb-md-0">
             <label for="description"><span class="input-group-text">Description: </span></label>
-            <input type="text" class="form-control" name="description" id="description" placeholder="Enter Description" ng-required>
+            <input type="text" class="form-control" name="description" id="description" [(ngModel)]="description" placeholder="Enter Description" ng-required>
         </div>
-        <div class="input-group">
+        <div class="input-group mb-2 mb-md-0">
             <label for="amount"><span class="input-group-text">$</span></label>
-            <input type="number" class="form-control" name="amount" id="amount" step=".01" placeholder="Enter Amount" ng-required="true">
+            <input type="number" class="form-control" name="amount" id="amount" step=".01" [(ngModel)]="amount" placeholder="Enter Amount" ng-required="true">
         </div>
     </div>
-    <button type="submit" class="btn btn-primary" (click)="click()">Add Expense</button>
+    <div class="d-md-flex justify-content-center">
+        <button type="submit" class="btn btn-primary" (click)="click()">Add Expense</button>
+    </div>
 </form>

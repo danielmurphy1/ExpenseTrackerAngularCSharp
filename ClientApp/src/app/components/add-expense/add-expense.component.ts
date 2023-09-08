@@ -6,7 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./add-expense.component.css']
 })
 export class AddExpenseComponent {
-
+  date: string;
+  location: string;
+  description: string;
+  amount: number;
+  
   click(){
     console.log('clicked')
   }
