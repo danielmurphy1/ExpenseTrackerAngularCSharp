@@ -1,0 +1,22 @@
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead class="table-light">
+            <tr>
+                <th>Date</th>
+                <th>Location</th>
+                <th>Description</th>
+                <th>Amount</th>
+                <th>Delete?</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let expense of expenses">
+                <td>{{ expense.date }}</td>
+                <td>{{ expense.location }}</td>
+                <td>{{ expense.description }}</td>
+                <td>${{ expense.amount }}</td>
+                <td><button class="btn btn-danger" (click)="handleDeleteButtonClick(expense)">X</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

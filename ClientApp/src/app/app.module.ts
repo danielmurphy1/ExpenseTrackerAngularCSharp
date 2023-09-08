@@ -7,12 +7,14 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';;
 import { HeaderComponent } from './components/header/header.component';
 import { AddExpenseComponent } from './components/add-expense/add-expense.component';
+import { ExpensesTableComponent } from './components/expenses-table/expenses-table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    AddExpenseComponent
+    AddExpenseComponent,
+    ExpensesTableComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
