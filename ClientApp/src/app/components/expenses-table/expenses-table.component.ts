@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Expense } from '../../Expense';
 import { EXPENSES } from '../../mock-expenses';
 
@@ -8,19 +8,20 @@ import { EXPENSES } from '../../mock-expenses';
   styleUrls: ['./expenses-table.component.css']
 })
 export class ExpensesTableComponent implements OnInit {
-  expenses: Expense[];
-  @Input() expense: Expense;
+  @Input() expenses: Expense[];
+  @Output() onDeleteExpense: EventEmitter<Expense> = new EventEmitter();
 
   constructor() {}
 
   ngOnInit(): void {
-    this.expenses = EXPENSES;
+    // this.expenses = EXPENSES;
   }
 
   handleDeleteButtonClick(expense: Expense){
     console.log(expense)
-    this.expenses = this.expenses.filter(ex => ex.id != expense.id)
-    console.log("expenses", this.expenses)
+    // this.expenses = this.expenses.filter(ex => ex.id != expense.id)
+    this.onDeleteExpense.emit(expense);
+    console.log("expenses in table component", this.expenses)
   }
 
 }
