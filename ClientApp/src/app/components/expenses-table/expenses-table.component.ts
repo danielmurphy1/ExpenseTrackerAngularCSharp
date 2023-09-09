@@ -1,6 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Expense } from '../../Expense';
-import { EXPENSES } from '../../mock-expenses';
 
 @Component({
   selector: 'app-expenses-table',

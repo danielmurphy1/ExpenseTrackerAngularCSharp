@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Expense } from "../../Expense"
-import { EXPENSES } from '../../mock-expenses';
 import { ExpensesService } from '../../services/expenses.service';
 
 @Component({
@@ -22,17 +21,14 @@ export class ExpensesComponent implements OnInit {
   }
 
   addExpense(expense: Expense): void {
-    console.log("expense parameter", expense)
-    expense.id = this.expenses.length + 1
-    this.expenses.push(expense)
-    console.log("expenses in expenses component after add", this.expenses)
+    this.expensesService.addExpense(expense).subscribe((ex) => {
+      this.expenses.push(ex);
+    })
   }
 
   deleteExpense(expense: Expense): void {
     this.expensesService.deleteExpense(expense).subscribe(() => {
       this.expenses = this.expenses.filter(ex => ex.id != expense.id)
     })
-    console.log("expenses in expenses component after delete", this.expenses)
-
   }
 }

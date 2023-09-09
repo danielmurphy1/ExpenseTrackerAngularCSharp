@@ -20,23 +20,12 @@ export class AddExpenseComponent implements OnInit {
   }
 
   submitButtonClickHandler(expense: Expense){
-    // const newExpense: Expense = {
-    //   date: this.date, 
-    //   location: this.location, 
-    //   description: this.description, 
-    //   amount: this.amount
-    // }
     expense ={
       date: this.date, 
       location: this.location, 
       description: this.description, 
       amount: this.amount
     }
-
-    console.log('outgoing expense', expense)
-
-    // this.expense = newExpense;
-
     this.onAddExpense.emit(expense);
   }
 }
