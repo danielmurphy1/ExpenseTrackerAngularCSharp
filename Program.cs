@@ -4,6 +4,13 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 
+// setup cors policy so that the client site will be allowed to make requests to the api - must be entered before the build process below
+builder.Services.AddCors(p => p.AddPolicy("corspolicy", build =>
+{
+    // can pass multiple domains as arguments or can pass "*" to allow any domain
+    build.WithOrigins("https://localhost:44465").AllowAnyMethod().AllowAnyHeader();
+}));
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -13,6 +20,8 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+//use the created above cors policy
+app.UseCors("corspolicy");
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
