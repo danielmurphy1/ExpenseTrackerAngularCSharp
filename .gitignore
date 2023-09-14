@@ -178,6 +178,7 @@ ClientBin/
 *.pfx
 *.publishsettings
 orleans.codegen.cs
+.env
 
 /node_modules
 /.angular/cache
