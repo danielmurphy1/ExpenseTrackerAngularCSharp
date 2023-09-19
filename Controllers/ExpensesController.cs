@@ -26,29 +26,19 @@ namespace ExpenseTrackerAngularCSharp.Controllers
 
         }
 
-        // GET api/<Expenses>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
         // POST api/<Expenses>
         [HttpPost]
         public void Post([FromBody] string value)
         {
         }
 
-        // PUT api/<Expenses>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
         // DELETE api/<Expenses>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        async public Task Delete(int id)
         {
+            DeleteExpenseService deleteExpenseService = new DeleteExpenseService();
+            int expenseID = id;
+            await deleteExpenseService.DeleteExpense(expenseID);
         }
     }
 }
