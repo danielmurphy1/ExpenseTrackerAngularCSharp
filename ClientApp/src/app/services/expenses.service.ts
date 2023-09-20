@@ -7,7 +7,7 @@ import { Expense } from '../Expense';
   providedIn: 'root'
 })
 export class ExpensesService {
-  //dummy json-server server
+  //json-server server
   //private apiUrl = 'http://localhost:5000/expenses';
   //Live Server
   private apiUrl = 'https://localhost:7001/api/expenses';
