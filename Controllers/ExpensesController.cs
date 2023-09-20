@@ -14,12 +14,6 @@ namespace ExpenseTrackerAngularCSharp.Controllers
         [HttpGet]
         public List<ExpenseModel> Get()
         {
-            //List<ExpenseModel> expenses = new List<ExpenseModel>();
-            //expenses.Add(new ExpenseModel { Id = 1, Date = "2023-05-11", Location = "Test Location", Description = "Test Description", Amount = 11.11M });
-            //expenses.Add(new ExpenseModel { Id = 2, Date = "2023-06-22", Location = "Test Location", Description = "Test Description", Amount = 22.22M });
-            //expenses.Add(new ExpenseModel { Id = 3, Date = "2023-07-09", Location = "Test Location", Description = "Test Description", Amount = 333.33M });
-            //return expenses;
-
             GetExpensesService getExpensesService = new GetExpensesService();
             List<ExpenseModel> expenses = getExpensesService.GetExpenses().Result;
             return expenses;
