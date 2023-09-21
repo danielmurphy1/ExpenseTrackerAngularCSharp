@@ -22,13 +22,20 @@ namespace ExpenseTrackerAngularCSharp.Controllers
 
         // POST api/<Expenses>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public async Task<ExpenseModel> Post([FromBody] ExpenseModel expense)
         {
+            PostExpenseService postExpenseService = new PostExpenseService();
+            string date = expense.Date;
+            string description = expense.Description;
+            string location = expense.Location;
+            decimal amount = expense.Amount;
+
+            return await postExpenseService.PostExpense(date, location, description, amount);
         }
 
         // DELETE api/<Expenses>/5
         [HttpDelete("{id}")]
-        async public Task Delete(int id)
+        public async Task Delete(int id)
         {
             DeleteExpenseService deleteExpenseService = new DeleteExpenseService();
             int expenseID = id;
