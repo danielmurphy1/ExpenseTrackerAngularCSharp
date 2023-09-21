@@ -1,6 +1,6 @@
-<form class="mt-5" #expenseForm="ngForm" (ngSubmit)="submitButtonClickHandler($event); expenseForm.resetForm()">
+<form class="mt-5 mb-2" #expenseForm="ngForm" (ngSubmit)="submitButtonClickHandler($event); expenseForm.resetForm()">
     <div class="d-md-flex mb-md-3 justify-content-between">
-        <div class="input-group mb-2 mb-md-0">
+        <div class="input-group mb-2 mb-md-0 pe-2">
             <label for="date"><span class="input-group-text">Date: </span></label>
             <input 
                 type="date" 
@@ -10,7 +10,7 @@
                 required
             />
         </div>
-        <div class="input-group mb-2 mb-md-0">
+        <div class="input-group mb-2 mb-md-0 pe-2">
             <label for="location"><span class="input-group-text">Location: </span></label>
             <input 
                 type="text" 
@@ -21,7 +21,7 @@
                 placeholder="Enter Location" 
                 required>
         </div>
-        <div class="input-group mb-2 mb-md-0">
+        <div class="input-group mb-2 mb-md-0 pe-2">
             <label for="description"><span class="input-group-text">Description: </span></label>
             <input 
                 type="text" 
@@ -33,7 +33,7 @@
                 required
             />
         </div>
-        <div class="input-group mb-2 mb-md-0">
+        <div class="input-group mb-2 mb-md-0 pe-2">
             <label for="amount"><span class="input-group-text">$</span></label>
             <input 
                 type="number" 
