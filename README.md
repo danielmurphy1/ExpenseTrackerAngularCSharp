@@ -58,7 +58,7 @@ This is my second full-stack application since I began learning C#/.NET. While I
 
 I found the setup to be pretty simple for this project, utilizing the WebAPI project type provided in Visual Studio. While I could have easily kept the logic for all database functions in the Program.cs file and the ExpensesController.cs file, I wanted to make sure that my code was readable and clean, so I opted to create a simple DatabaseConnection.cs file to keep on its own, as well as several service files for each of the different queries needed for the databse. I found that made the code much more readable, which is something that I strive for when I write applications.
 
-Additionally to meet the same end of clean and readable code, I used Angular's built in services module to handle the client-side api request so that the main front-end logic could be handled by each component - calling the service where needed. Again, I was very pleased with the readability of the end product. 
+Additionally, to meet the same end of clean and readable code, I used Angular's built in services module to handle the client-side API requests so that the main front-end logic could be handled by each component - calling the service where needed. Again, I was very pleased with the readability of the end product. 
 
 In creating this project, I learned more about Angular form validation, as well as some of Angular's powerful built-in directives. Certainly, I have used them before, but seeing as this was a personal project, I had the time to read more about them as I used them to gain the needed functionality in this project with the result being a deeper knowledge and understanding of how they work and interact with components.
 
