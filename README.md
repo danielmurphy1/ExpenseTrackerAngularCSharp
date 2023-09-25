@@ -4,7 +4,7 @@ _Web Based Expense Tracker Application_
 
 Create an Expense Tracker to Track Expenses and Delete Them As Needed
 
-View To Do Application Live [Link to Application](https://expensetrackerangularcsharp.azurewebsites.net/) 
+View Expense Tracker Application Live [Link to Application](https://expensetrackerangularcsharp.azurewebsites.net/) 
 
 
 ## Instructions
@@ -13,12 +13,12 @@ To Download and Run With a Local PostgreSQL Database
 
 I. Clone SQL Databse Schema
 
-1. Download PosgreSQL/PGAdmin 
+1. Download [PosgreSQL](https://www.postgresql.org/download/)/[PGAdmin](https://www.pgadmin.org/) 
 2. Run the databse creation script in the `backup.sql` file in the `root` directory
 
 II. Install Files to Run Locally
 
-1. Clone code locally from GitHub and Open in Visual Studio.
+1. Clone code locally from [GitHub](https://github.com/danielmurphy1/ExpenseTrackerAngularCSharp) and Open in [Visual Studio](https://visualstudio.microsoft.com/).
 2. CD into `ClientApp` directory.
 3. Run `npm i` in `ClientApp` directory in the terminal.
 4. In the root directory, rename `.env_sample` to `.env` file and replace `DEVELOPMENT_CONNECTION_STRING` with the connection string for your local PostgreSQL database.
