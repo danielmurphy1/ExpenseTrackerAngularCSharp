@@ -36,14 +36,15 @@ To Download and Run With JSON-Server
 6. If your browser does not open automatically, open a browser and enter `https://localhost:4200` to run the application.
 
 ### Application Screenshots
-![Application Screenshot](https://github.com/danielmurphy1/csharptodo/blob/main/images/csharptodo.JPG)
+![Full Screen](https://github.com/danielmurphy1/ExpenseTrackerAngularCSharp/blob/master/Screenshots/FullScreenExpenseTracker.JPG)
 
+![Mobile/Responsive Screen](https://github.com/danielmurphy1/ExpenseTrackerAngularCSharp/blob/master/Screenshots/MobileScreenExpenseTrackerJPG.JPG)
 ## Technologies/Design
 
 ### Technology Stack
 
-- JavaScript with React Framework, CSS with Boostrap Library - Front End Stack
-- C# with ASP.NET Web Application (.NET Framework) - Backend Stack and Internal/REST API
+- TypeScript/JavaScript with Angular Framework, CSS with Boostrap Library - Front End Stack
+- C# with ASP.NET Web Application (ASP.NET Core 6) - Backend Stack and Internal/REST API
 - PostgreSQL - Database with Npgsql Nuget Package
 - Microsoft Azure - Hosting platform
 
@@ -53,13 +54,15 @@ To Download and Run With JSON-Server
 
 ### Summary
 
-This application is my second since I have begun learning C# and my first using .NET and also my first fullstack application using C#/ASP.NET Web Application. 
+This is my second full-stack application since I began learning C#/.NET. While I have used Angular extensively at work, this is my first personal project using it, as I have favored React for personal projects in the past.
 
-To create this application I continued to expand on my C# knowledge as well as learning .NET Web API from the beginning. I have created a couple of seperate To Do applications in the past; however, this is the first one that I have created using a SQL database and to have full CRUD capabilities (previously relying on local storage for data persistence).  
+I found the setup to be pretty simple for this project, utilizing the WebAPI project type provided in Visual Studio. While I could have easily kept the logic for all database functions in the Program.cs file and the ExpensesController.cs file, I wanted to make sure that my code was readable and clean, so I opted to create a simple DatabaseConnection.cs file to keep on its own, as well as several service files for each of the different queries needed for the databse. I found that made the code much more readable, which is something that I strive for when I write applications.
 
-In creating this application I learned more about how data and requests flow between the client, server, and databse. I also learned more about how to split the backend logic between the REST API endpoint controllers and the services that each endpoint calls to perform database operations. 
+Additionally to meet the same end of clean and readable code, I used Angular's built in services module to handle the client-side api request so that the main front-end logic could be handled by each component - calling the service where needed. Again, I was very pleased with the readability of the end product. 
 
-As this was my first application deployed to Microsoft Azure, I also learned how that deployment process works. More importantly, I learned how to use Azure's logging to identify and fix problems during the deployment process. 
+In creating this project, I learned more about Angular form validation, as well as some of Angular's powerful built-in directives. Certainly, I have used them before, but seeing as this was a personal project, I had the time to read more about them as I used them to gain the needed functionality in this project with the result being a deeper knowledge and understanding of how they work and interact with components.
+
+I also learned more about the deployment process to Microsoft Azure and how to use its built-in tools for troubleshooting during deployment.
 
 I look forward to continue my learning of C# and the .NET framework in future projects. 
 
