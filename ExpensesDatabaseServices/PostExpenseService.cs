@@ -13,7 +13,7 @@ namespace ExpenseTrackerAngularCSharp.ExpensesDatabaseServices
                 await using (var connection = await dataSource.OpenConnectionAsync())
                 {
                     ExpenseModel newExpense = new ExpenseModel();
-                    await using (NpgsqlCommand command = new NpgsqlCommand("INSERT INTO expenses (date, description, location, amount) VALUES ($1, $2, $3, $4) RETURNING *;", connection)
+                    await using (NpgsqlCommand command = new NpgsqlCommand("INSERT INTO expenses (date, location, description, amount) VALUES ($1, $2, $3, $4) RETURNING *;", connection)
                     {
                         Parameters =
                         {
