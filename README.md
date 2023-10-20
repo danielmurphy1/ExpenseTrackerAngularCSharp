@@ -54,6 +54,9 @@ To Download and Run With JSON-Server
 
 ### Summary
 
+Edit 10/20/2023:
+I recently learned about dependency injection in C#/.NET, so I implemented it into this project for the DatabaseConnection file and all of the files in the DatabaseServices folder. Certainly a better way to follow the OOP principle of encapsulation. Additionally, from what I have learned, this process helps with Unit Testing. While I have not yet implemented unit tests into this project, that is something that I plan to learn and implement in future projects. I will certainly take what I have learned about dependency injection and implement it from the start in future projects while I continue to learn more about that topic and C#/.NET in general.
+
 This is my second full-stack application since I began learning C#/.NET. While I have used Angular extensively at work, this is my first personal project using it, as I have favored React for personal projects in the past.
 
 I found the setup to be pretty simple for this project, utilizing the WebAPI project type provided in Visual Studio. While I could have easily kept the logic for all database functions in the Program.cs file and the ExpensesController.cs file, I wanted to make sure that my code was readable and clean, so I opted to create a simple DatabaseConnection.cs file to keep on its own, as well as several service files for each of the different queries needed for the databse. I found that made the code much more readable, which is something that I strive for when I write applications.

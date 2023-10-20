@@ -27,8 +27,8 @@ namespace ExpenseTrackerAngularCSharp.ExpensesDatabaseServices
                             {
                                 Id = reader.GetInt32(0),
                                 Date = reader.GetString(1),
-                                Description = reader.GetString(2),
-                                Location = reader.GetString(3),
+                                Location = reader.GetString(2),
+                                Description = reader.GetString(3),
                                 Amount = reader.GetDecimal(4)
                             };
                             expenses.Add(expense);
