@@ -7,10 +7,14 @@ namespace ExpenseTrackerAngularCSharp.ExpensesDatabaseServices
 {
     public class GetExpensesService
     {
+        private readonly DatabaseConnection _dbConnection;
+        public GetExpensesService(DatabaseConnection dbConnection)
+        {
+            _dbConnection = dbConnection;
+        }
         public async Task<List<ExpenseModel>> GetExpenses()
         {
-            DatabaseConnection dbconnection = new DatabaseConnection();
-            await using (NpgsqlDataSource dataSource = dbconnection.GetConnection())
+            await using (NpgsqlDataSource dataSource = _dbConnection.GetConnection())
             {
                 List<ExpenseModel> expenses = new List<ExpenseModel>();
                 await using (NpgsqlCommand command = dataSource.CreateCommand("SELECT * FROM expenses ORDER BY id"))
@@ -23,8 +27,8 @@ namespace ExpenseTrackerAngularCSharp.ExpensesDatabaseServices
                             {
                                 Id = reader.GetInt32(0),
                                 Date = reader.GetString(1),
-                                Location = reader.GetString(2),
-                                Description = reader.GetString(3),
+                                Description = reader.GetString(2),
+                                Location = reader.GetString(3),
                                 Amount = reader.GetDecimal(4)
                             };
                             expenses.Add(expense);

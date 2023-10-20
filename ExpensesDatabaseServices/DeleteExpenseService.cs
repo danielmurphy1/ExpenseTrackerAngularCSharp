@@ -4,10 +4,15 @@ namespace ExpenseTrackerAngularCSharp.ExpensesDatabaseServices
 {
     public class DeleteExpenseService
     {
+        private readonly DatabaseConnection _dbConnection;
+        public DeleteExpenseService(DatabaseConnection dbConnection)
+        {
+            _dbConnection = dbConnection;
+        }
         public async Task DeleteExpense(int id)
         {
-            DatabaseConnection dbconnection = new DatabaseConnection();
-            await using (NpgsqlDataSource dataSource = dbconnection.GetConnection())
+           
+            await using (NpgsqlDataSource dataSource = _dbConnection.GetConnection())
             {
                 await using (var connection = await dataSource.OpenConnectionAsync())
                 {

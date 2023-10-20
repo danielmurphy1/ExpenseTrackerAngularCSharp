@@ -1,8 +1,15 @@
+using ExpenseTrackerAngularCSharp;
+using ExpenseTrackerAngularCSharp.ExpensesDatabaseServices;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<DatabaseConnection>();
+builder.Services.AddScoped<GetExpensesService>();
+builder.Services.AddScoped<PostExpenseService>();
+builder.Services.AddScoped<DeleteExpenseService>();
 
 // setup cors policy so that the client site will be allowed to make requests to the api - must be entered before the build process below
 builder.Services.AddCors(p => p.AddPolicy("corspolicy", build =>
